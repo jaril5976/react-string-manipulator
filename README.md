@@ -11,19 +11,19 @@ npm install --save react-string-manipulator
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
 
 import Jaril from 'react-string-manipulator'
 
 class Example extends Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <Jaril
           text='Hello World, How are me today?'
           findAndReplace={{
-            find: 'me',
-            replace: 'you'
+            findText: 'me',
+            replaceText: 'you'
           }}
         />
         <Jaril
@@ -33,7 +33,7 @@ class Example extends Component {
             string: 'World'
           }}
         />
-      </div>
+      </Fragment>
     )
   }
 }

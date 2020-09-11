@@ -1,24 +1,21 @@
 import React, { Fragment } from 'react'
-
 import Jaril from 'react-string-manipulator'
-// import 'react-string-manipulator/dist/index.css'
 
 const App = () => {
   return (
     <Fragment>
       <Jaril
-        text='Hello My Name is Manan  Solanki'
+        text='Hello World, How are me today?'
         findAndReplace={{
-          find: 'Manan',
-          replace: 'Yash'
+          findText: 'me',
+          replaceText: 'you'
         }}
       />
-
       <Jaril
-        text='Hello My Name is Manan  Solanki'
+        text='Hello World, How are you today?'
         tagName={{
           tag: 'b',
-          string: 'Manan'
+          string: 'World'
         }}
       />
     </Fragment>

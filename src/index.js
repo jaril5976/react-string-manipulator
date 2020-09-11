@@ -2,20 +2,17 @@ import React, { useEffect, useState } from 'react'
 
 const Jaril = ({ text, findAndReplace = false, tagName = false }) => {
   const [replaceText, setReplaceText] = useState(text)
+  useEffect(() => {
+    if (!findAndReplace) return
+    const { findText, replaceText } = findAndReplace
+    setReplaceText(text.replace(findText, replaceText))
+  }, [findAndReplace])
 
   useEffect(() => {
-    return setReplaceText('')
-  }, [text])
-
-  useEffect(() => {
-    const { find, replace } = findAndReplace
-    setReplaceText(text.replace(find, replace))
-  }, [findAndReplace, text])
-
-  useEffect(() => {
+    if (!tagName) return
     const { tag, string } = tagName
     setReplaceText(text.replace(string, `<${tag}>${string}</${tag}>`))
-  }, [tagName, text])
+  }, [tagName])
 
   if (tagName) return <div dangerouslySetInnerHTML={{ __html: replaceText }} />
   return <div>{replaceText}</div>
