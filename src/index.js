@@ -1,6 +1,24 @@
-import React from 'react'
-import styles from './styles.module.css'
+import React, { useEffect, useState } from 'react'
 
-export const ExampleComponent = ({ text }) => {
-  return <div className={styles.test}>Example Component: {text}</div>
+const Jaril = ({ text, findAndReplace = false, tagName = false }) => {
+  const [replaceText, setReplaceText] = useState(text)
+
+  useEffect(() => {
+    return setReplaceText('')
+  }, [text])
+
+  useEffect(() => {
+    const { find, replace } = findAndReplace
+    setReplaceText(text.replace(find, replace))
+  }, [findAndReplace, text])
+
+  useEffect(() => {
+    const { tag, string } = tagName
+    setReplaceText(text.replace(string, `<${tag}>${string}</${tag}>`))
+  }, [tagName, text])
+
+  if (tagName) return <div dangerouslySetInnerHTML={{ __html: replaceText }} />
+  return <div>{replaceText}</div>
 }
+
+export default Jaril

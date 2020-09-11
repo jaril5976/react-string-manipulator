@@ -1,10 +1,28 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
-import { ExampleComponent } from 'react-string-manipulator'
-import 'react-string-manipulator/dist/index.css'
+import Jaril from 'react-string-manipulator'
+// import 'react-string-manipulator/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <Fragment>
+      <Jaril
+        text='Hello My Name is Manan  Solanki'
+        findAndReplace={{
+          find: 'Manan',
+          replace: 'Yash'
+        }}
+      />
+
+      <Jaril
+        text='Hello My Name is Manan  Solanki'
+        tagName={{
+          tag: 'b',
+          string: 'Manan'
+        }}
+      />
+    </Fragment>
+  )
 }
 
 export default App
