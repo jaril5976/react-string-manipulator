@@ -1,10 +1,10 @@
 {
   "name": "react-string-manipulator",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "Made with create-react-library",
-  "author": "Yash2906",
+  "author": "Raj Jariwala",
   "license": "MIT",
-  "repository": "Yash2906/react-string-manipulator",
+  "repository": "jaril5976/react-string-manipulator",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",

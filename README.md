@@ -1,7 +1,5 @@
 # react-string-manipulator
 
-> Made with create-react-library
-
 [![NPM](https://img.shields.io/npm/v/react-string-manipulator.svg)](https://www.npmjs.com/package/react-string-manipulator) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
@@ -15,16 +13,32 @@ npm install --save react-string-manipulator
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'react-string-manipulator'
-import 'react-string-manipulator/dist/index.css'
+import Jaril from 'react-string-manipulator'
 
 class Example extends Component {
   render() {
-    return <MyComponent />
+    return (
+      <div>
+        <Jaril
+          text='Hello World, How are me today?'
+          findAndReplace={{
+            find: 'me',
+            replace: 'you'
+          }}
+        />
+        <Jaril
+          text='Hello World, How are you today?'
+          tagName={{
+            tag: 'b',
+            string: 'World'
+          }}
+        />
+      </div>
+    )
   }
 }
 ```
 
 ## License
 
-MIT © [Yash2906](https://github.com/Yash2906)
+MIT © [jaril5976](https://github.com/jaril5976)
