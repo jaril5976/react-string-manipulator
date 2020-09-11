@@ -1,4 +1,4 @@
-# react-string-manipulator
+# react-string-manipulator [ Founder : Raj Jariwala ]
 
 [![NPM](https://img.shields.io/npm/v/react-string-manipulator.svg)](https://www.npmjs.com/package/react-string-manipulator) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
