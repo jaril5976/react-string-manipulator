@@ -1,16 +1,16 @@
 {
   "name": "react-string-manipulator",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Made with create-react-library",
   "author": "Raj Jariwala",
   "license": "MIT",
   "repository": "jaril5976/react-string-manipulator",
   "keywords": [
     "react",
-    "string replace",
-    "react-string-manipulator",
-    "string-tag",
-    "react string render"
+    "string",
+    "manipulate",
+    "replace",
+    "tag"
   ],
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
