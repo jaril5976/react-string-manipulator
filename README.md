@@ -39,6 +39,31 @@ class Example extends Component {
 }
 ```
 
+## Usage of Hooks
+
+```jsx
+import React, { Component, Fragment } from 'react'
+
+import { useManipulator } from 'react-string-manipulator'
+
+class App extends Component {
+  state = {
+    heading: useManipulator({
+      text: 'Hello World',
+      search: 'World',
+      tag: 'b'
+    })
+  }
+  render() {
+    return (
+      <div
+        dangerouslySetInnerHTML={{ __html: this.state.heading.renderString }}
+      />
+    )
+  }
+}
+```
+
 ## License
 
 MIT © [jaril5976](https://github.com/jaril5976)
