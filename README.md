@@ -11,57 +11,50 @@ npm install --save react-string-manipulator
 ## Usage
 
 ```jsx
-import React, { Component, Fragment } from 'react'
-
+import React, { Fragment } from 'react'
 import Jaril from 'react-string-manipulator'
 
-class Example extends Component {
-  render() {
-    return (
-      <Fragment>
-        <Jaril
-          text='Hello World, How are me today?'
-          findAndReplace={{
-            findText: 'me',
-            replaceText: 'you'
-          }}
-        />
-        <Jaril
-          text='Hello World, How are you today?'
-          tagName={{
-            tag: 'b',
-            string: 'World'
-          }}
-        />
-      </Fragment>
-    )
-  }
-}
+const App = () => (
+  <Fragment>
+    <Jaril
+      text='Hello World, How are me today?'
+      findAndReplace={{
+        findText: 'me',
+        replaceText: 'you'
+      }}
+    />
+    <Jaril
+      text='Hello World, How are you today?'
+      tagName={{
+        tag: 'b',
+        string: 'World'
+      }}
+    />
+  </Fragment>
+)
+
+export default App
 ```
 
 ## Usage of Hooks
 
 ```jsx
-import React, { Component, Fragment } from 'react'
+import React, { useState } from 'react'
 
 import { useManipulator } from 'react-string-manipulator'
 
-class App extends Component {
-  state = {
-    heading: useManipulator({
+const App = () => {
+  const [heading, setHeading] = useState(
+    useManipulator({
       text: 'Hello World',
       search: 'World',
       tag: 'b'
     })
-  }
-  render() {
-    return (
-      <div
-        dangerouslySetInnerHTML={{ __html: this.state.heading.renderString }}
-      />
-    )
-  }
+  )
+  return <div dangerouslySetInnerHTML={{ __html: heading.renderString }} />
 }
+
+export default App
 ```
 
 ## License
