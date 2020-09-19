@@ -40,7 +40,6 @@ export default App
 
 ```jsx
 import React, { useState } from 'react'
-
 import { useManipulator } from 'react-string-manipulator'
 
 const App = () => {
